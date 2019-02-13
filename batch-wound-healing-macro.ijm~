@@ -1,0 +1,33 @@
+input = "/Users/input/";
+output = "Users/input/"; // I would create an extra folder for the output!
+
+//setBatchMode(true);
+list = getFileList(input);
+for (i = 0; i < list.length; i++) {
+    action(input, output, list[i]);
+}
+
+
+//
+//  Start of program
+//
+
+function action(input, output, image) {
+    setBatchMode(true);
+// To Run the wound healing measuring macro 
+
+
+
+// To save results
+	selectWindow("Results");
+	// saveAs("Results",  output + yourFileName + ".csv"); 
+	// saveAs("Results")
+	selectWindow("ROI Manager")
+
+
+// To close previously opened windows.
+    selectWindow("ROI Manager");
+    run("Close");
+    selectWindow("Results");
+    run("Close");
+}
